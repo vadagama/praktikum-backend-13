@@ -1,28 +1,8 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable quotes */
-/* eslint-disable quote-props */
+const router = require('express').Router()
+const { getUsers, getUser, createUser } = require('../controllers/users')
 
-const usersRouter = require('express').Router();
-const users = require('../data/users');
+router.get('/', getUsers)
+router.get('/:id', getUser)
+router.post('/', createUser)
 
-usersRouter.get('/users', (req, res) => {
-  res.send(users);
-});
-
-usersRouter.get('/users/:id', (req, res) => {
-  const { id } = req.params;
-  let flag = '';
-  users.forEach((item) => {
-    if (item._id === id) {
-      flag = item;
-    }
-  });
-
-  if (!flag) {
-    res.send({ "message": "Нет пользователя с таким id" });
-    return;
-  }
-  res.send(flag);
-});
-
-module.exports = usersRouter;
+module.exports = router
