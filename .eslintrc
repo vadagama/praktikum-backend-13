@@ -3,5 +3,8 @@
         "semi": ["error", "always"],
         "quotes": ["error", "double"],
         "_id": ["off", "always"]
-    }
+    },
+    "parserOptions": {
+        "ecmaVersion": 6
+      }
 }
