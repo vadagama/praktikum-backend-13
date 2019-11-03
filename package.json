@@ -1,7 +1,7 @@
 {
-  "name": "praktikum-backend-12",
-  "version": "1.0.0",
-  "description": "",
+  "name": "praktikum-backend-13",
+  "version": "1.0.1",
+  "description": "Проект проверки знаний по разработки API для Mesto",
   "main": "app.js",
   "scripts": {
     "start": "app.js",
